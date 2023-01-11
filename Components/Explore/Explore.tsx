@@ -127,7 +127,7 @@ export default function Explore({}: Props) {
                     <div className="transition-transform duration-300 group-focus:translate-x-4">
                       See more details
                     </div>
-                    <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 ease-out group-focus:translate-x-96 group-focus:ease-in-out  lg:group-focus:translate-x-24"></ArrowRightIcon>
+                    <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 ease-out group-focus:translate-x-32 group-focus:ease-in-out xs:group-focus:translate-x-96 md:group-focus:translate-x-[500px]  lg:group-focus:translate-x-24"></ArrowRightIcon>
                   </div>
                 </div>
               </div>

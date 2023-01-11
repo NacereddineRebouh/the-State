@@ -6,6 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    extend: {
+    boxShadow: {
+      '3xl': '0px 0px 20px rgba(100, 100, 100, .5)',
+    }
+  },
     screens: {
       'xs': '440px',
       // => @media (min-width: 440px) { ... }

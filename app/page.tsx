@@ -23,7 +23,7 @@ export default function HomePage({}: Props) {
       <section id="Explore" className="mt-40">
         <Explore />
       </section>
-      <section id="Featured_Places" className="mt-60">
+      <section id="Featured_Places" className="mt-40 md:mt-60">
         <Featured_Places />
       </section>
     </div>

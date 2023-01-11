@@ -32,12 +32,12 @@ export default function AboutUs({}: Props) {
 
               <div
                 tabIndex={0}
-                className="group flex w-52 cursor-pointer flex-row items-center justify-center gap-x-5 overflow-hidden rounded-2xl border-[2px] border-slate-700 px-8 py-4 font-medium transition-all duration-300 focus:bg-slate-100 focus:shadow-lg hover:bg-slate-100 active:scale-95 active:shadow-lg"
+                className="group flex w-full cursor-pointer flex-row items-center justify-center gap-x-5 overflow-hidden rounded-2xl border-[2px] border-slate-700 px-8 py-4 font-medium transition-all duration-300 focus:bg-slate-100 focus:shadow-lg hover:bg-slate-100 active:scale-95 active:shadow-lg sm:w-52"
               >
                 <div className="transition-transform duration-300 group-focus:translate-x-4 group-active:translate-x-4">
                   Learn more
                 </div>
-                <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 ease-out group-focus:translate-x-16 group-focus:ease-in-out group-active:translate-x-24 group-active:ease-in-out"></ArrowRightIcon>
+                <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 ease-out group-focus:translate-x-40 group-focus:ease-in-out xs:group-focus:translate-x-96"></ArrowRightIcon>
               </div>
             </div>
             {/* right side */}
