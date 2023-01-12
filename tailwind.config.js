@@ -9,7 +9,18 @@ module.exports = {
     extend: {
     boxShadow: {
       '3xl': '0px 0px 20px rgba(100, 100, 100, .5)',
+    },
+    dropShadow:{
+      'centered':'0px 0px 10px #c5c5c5e6',
+      'face':['0px 0px 15px hsla(216, 100%, 75%, 1)','0px 0px 15px hsla(216, 100%, 75%, 0.671)'],
+      'inst':['0px 0px 15px #ff8e62c7','0px 0px 15px #fa8e63cc'],
+      'tel':['0px 0px 15px hsla(216, 100%, 67%, 0.801)','0px 0px 15px hsla(216, 100%, 67%, 0.842)'],
+      'twit':['0px 0px 10px #35c6ffc7','0px 0px 10px #65d3ffce'],
+    },
+    backgroundImage:{
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
     }
+
   },
     screens: {
       'xs': '440px',

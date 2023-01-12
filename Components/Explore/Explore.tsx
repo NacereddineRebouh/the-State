@@ -18,7 +18,7 @@ export default function Explore({}: Props) {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-[2500px]">
-        <div className="my-6 mx-5 flex flex-col gap-y-24 md:mx-10 lg:mx-16 xl:mx-24">
+        <div className="my-6 mx-5 flex flex-col gap-y-12 sm:gap-y-24 md:mx-10 lg:mx-16 xl:mx-24">
           {/* Row 1 */}
           <div className="flex flex-1 flex-col gap-y-3 text-center text-xl font-semibold text-orange-500 xs:text-2xl sm:text-start">
             <p>Explore</p>
@@ -122,7 +122,7 @@ export default function Explore({}: Props) {
                 <div className="flex h-2/5 w-full items-center">
                   <div
                     tabIndex={0}
-                    className="group flex w-full cursor-pointer flex-row items-center justify-center gap-x-5 overflow-hidden rounded-2xl border-[2px] border-slate-700 px-8 py-4 font-medium transition-all duration-300 focus:bg-slate-100 focus:shadow-lg hover:bg-slate-100 active:scale-95 active:shadow-lg lg:w-72 3xl:h-20"
+                    className="group flex w-full cursor-pointer flex-row items-center justify-center gap-x-5 overflow-hidden rounded-3xl border-[2px] border-slate-700 px-8 py-4 font-medium transition-all duration-300 focus:bg-slate-100 focus:shadow-lg hover:bg-slate-100 active:scale-95 active:shadow-lg lg:w-72 lg:rounded-2xl 3xl:h-20"
                   >
                     <div className="transition-transform duration-300 group-focus:translate-x-4">
                       See more details

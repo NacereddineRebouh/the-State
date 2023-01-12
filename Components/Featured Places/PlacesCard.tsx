@@ -113,6 +113,7 @@ export default function PlacesCard({
                 alt="image"
                 quality={60}
                 width={1000}
+                sizes={"(max-width: 768px)100vw,(max-width: 1200px) 50vw, 33vw"}
                 height={1000}
                 onLoad={() => setloaded("none")}
                 // placeholder="blur"

@@ -16,11 +16,7 @@ import AboutUs_module from "../../styles/aboutUs.module.css";
 import { ScrollingCarousel } from "@trendyol-js/react-carousel";
 
 //assets
-import image1 from "../../public/Images/Places/1.jpg";
 import image2 from "../../public/Images/Places/2.jpg";
-import image3 from "../../public/Images/Places/3.jpg";
-import image4 from "../../public/Images/Places/4.jpg";
-import image5 from "../../public/Images/Places/5.jpg";
 import image6 from "../../public/Images/Places/6.jpg";
 import image7 from "../../public/Images/Places/7.jpg";
 import image8 from "../../public/Images/Places/8.jpg";

@@ -4,6 +4,9 @@ import Hero from "../Components/Hero/Hero";
 import About_us from "../Components/about us/About_us";
 import Explore from "../Components/Explore/Explore";
 import Featured_Places from "../Components/Featured Places/Featured_Places";
+import Testimonials from "../Components/Testimonials/Testimonials";
+import GetStarted from "../Components/GetStarted/GetStarted";
+import Footer from "../Components/Footer/Footer";
 type Props = {};
 
 export default function HomePage({}: Props) {
@@ -25,6 +28,12 @@ export default function HomePage({}: Props) {
       </section>
       <section id="Featured_Places" className="mt-40 md:mt-60">
         <Featured_Places />
+      </section>
+      <section id="Testimonials" className="mt-40 md:mt-60">
+        <Testimonials />
+      </section>
+      <section id="GetStarted" className="mt-40 md:mt-60">
+        <GetStarted />
       </section>
     </div>
   );
