@@ -100,7 +100,7 @@ export default function PlacesCard({
           );
         }}
       >
-        {Images?.map((image: StaticImageData | string, index: number) => {
+        {images?.map((image: StaticImageData | string, index: number) => {
           return (
             <div
               className={`aspect-[13/12] h-full cursor-pointer overflow-clip rounded-xl bg-[#f5f5f5] animate-${loaded}`}

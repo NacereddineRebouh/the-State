@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import LocationMap from "./LocationMap";
@@ -12,32 +13,79 @@ import { ShareIcon, StarIcon } from "@heroicons/react/24/outline";
 import { BiBath, BiRuler } from "react-icons/bi";
 import { MdBed, MdOutlineDirectionsCarFilled } from "react-icons/md";
 import { FiShare2 } from "react-icons/fi";
-type Props = {};
+import { motion } from "framer-motion";
+type Props = {
+  SearchBarLocation?: React.ReactNode;
+};
 
-export default function Explore({}: Props) {
+export default function Explore({ SearchBarLocation }: Props) {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-[2500px]">
         <div className="my-6 mx-5 flex flex-col gap-y-12 sm:gap-y-24 md:mx-10 lg:mx-16 xl:mx-24">
           {/* Row 1 */}
           <div className="flex flex-1 flex-col gap-y-3 text-center text-xl font-semibold text-orange-500 xs:text-2xl sm:text-start">
-            <p>Explore</p>
-            <div className="text-center text-4xl font-extrabold text-slate-800 xs:text-[50px] xs:leading-[60px] sm:text-start sm:text-[60px] sm:leading-[70px] md:text-[70px] md:leading-[90px]">
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ y: -120, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                type: "spring",
+                damping: 30,
+                stiffness: 100,
+              }}
+            >
+              Explore
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ x: -300, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                type: "spring",
+                damping: 25,
+                stiffness: 100,
+              }}
+              className="text-center text-4xl font-extrabold text-slate-800 xs:text-[50px] xs:leading-[60px] sm:text-start sm:text-[60px] sm:leading-[70px] md:text-[70px] md:leading-[90px]"
+            >
               Find your area
-            </div>
+            </motion.div>
           </div>
 
           {/* Row 2 */}
           <div className="flex h-[1700px] w-full flex-col gap-y-20 gap-x-10 lg:h-[720px] lg:flex-row lg:gap-y-0 xl:gap-x-32 2xl:h-[850px] 2xl:gap-x-36 4xl:h-[1100px] 5xl:gap-x-96">
-            <div className="relative flex h-1/2 w-full flex-col overflow-hidden rounded-[34px] border-[1.7px] border-slate-300 bg-stone-100 lg:h-auto lg:w-1/2">
-              {/* @ts-expect-error Server Component */}
-              <SearchBar_Location />
+            <motion.div
+              initial={{ opacity: 0 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 1,
+                type: "spring",
+                damping: 60,
+                stiffness: 100,
+              }}
+              className="relative flex h-1/2 w-full flex-col overflow-hidden rounded-[34px] border-[1.7px] border-slate-300 bg-stone-100 lg:h-auto lg:w-1/2"
+            >
+              {SearchBarLocation}
               <LocationMap />
               <div className="absolute bottom-20 right-0 left-0 z-10 h-44 w-full drop-shadow-xl">
                 <SwiperComponent />
               </div>
-            </div>
-            <div className="flex h-1/2 w-full flex-col gap-y-5 rounded-[34px] lg:h-auto lg:w-1/2">
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ x: "100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                damping: 35,
+                stiffness: 100,
+              }}
+              className="flex h-1/2 w-full flex-col gap-y-5 rounded-[34px] lg:h-auto lg:w-1/2"
+            >
               <div className="flex h-3/5 w-full flex-row">
                 <div className="relative h-full w-8/12 overflow-hidden rounded-2xl ">
                   <Image
@@ -131,7 +179,7 @@ export default function Explore({}: Props) {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

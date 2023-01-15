@@ -51,7 +51,7 @@ export default function Header({}: Props) {
                   </Link>
                   <Link
                     className="hidden flex-auto items-center truncate rounded-2xl py-3 px-4 transition-all duration-300 hover:bg-gray-100 sm:flex"
-                    href="#"
+                    href="#Explore"
                   >
                     Explore
                   </Link>

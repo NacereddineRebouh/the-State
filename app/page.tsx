@@ -7,6 +7,8 @@ import Featured_Places from "../Components/Featured Places/Featured_Places";
 import Testimonials from "../Components/Testimonials/Testimonials";
 import GetStarted from "../Components/GetStarted/GetStarted";
 import Footer from "../Components/Footer/Footer";
+import Use_Scroll from "../Components/testing animations/use_Scroll";
+import SearchBar_Location from "../Components/Explore/SearchBar_Location";
 type Props = {};
 
 export default function HomePage({}: Props) {
@@ -14,7 +16,9 @@ export default function HomePage({}: Props) {
     <div>
       {/* Hero section */}
       <section id="hero" className="">
+        {/* <Use_Scroll> */}
         <Hero />
+        {/* </Use_Scroll> */}
       </section>
       <section
         id="aboutUs"
@@ -24,7 +28,8 @@ export default function HomePage({}: Props) {
       </section>
 
       <section id="Explore" className="mt-40">
-        <Explore />
+        {/* @ts-expect-error Server Component */}
+        <Explore SearchBarLocation={<SearchBar_Location />} />
       </section>
       <section id="Featured_Places" className="mt-40 md:mt-60">
         <Featured_Places />

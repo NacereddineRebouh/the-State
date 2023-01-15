@@ -22,9 +22,9 @@ export default function FilterButton({ title }: Props) {
         htmlFor={radio}
         className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-300 group-active:scale-95 peer-checked:cursor-default peer-checked:text-black"
       >
-        <p className="truncate font-medium">{title}</p>
+        <p className="truncate text-sm font-medium md:text-base">{title}</p>
       </label>
-      <div className="h-[6px] w-9/12 rounded-full transition-all duration-500 group-hover:bg-[#888888]/40 peer-checked:bg-slate-700 " />
+      <div className="h-[4px] w-9/12 rounded-full transition-all duration-500 group-hover:bg-[#888888]/40 peer-checked:bg-slate-700 md:h-[6px] " />
     </div>
   );
 }

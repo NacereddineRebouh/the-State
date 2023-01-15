@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import image1 from "../../public/Images/Get Started/1.jpg";
@@ -5,6 +6,7 @@ import image2 from "../../public/Images/Get Started/2.jpg";
 import image3 from "../../public/Images/Get Started/3.jpg";
 
 import background from "../../public/Images/Background/Lines2.png";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -13,13 +15,24 @@ export default function GetStarted({}: Props) {
     <div className="w-full">
       <div className="mx-auto max-w-[2500px]">
         <div className="mx-5 flex h-[500px] flex-col md:mx-10 lg:mx-16 xl:mx-24">
-          <div className="group/parent relative flex h-full flex-col items-center gap-y-12 overflow-hidden rounded-[50px] bg-slate-900 px-10 py-12 transition-all duration-[3000ms] lg:flex-row lg:gap-y-0 lg:gap-x-8 lg:overflow-visible xl:gap-x-20 xl:px-20">
+          <motion.div
+            initial={{ x: "100%", opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              type: "spring",
+              damping: 50,
+              stiffness: 100,
+            }}
+            className="group/parent relative flex h-full flex-col items-center gap-y-12 overflow-hidden rounded-[50px] bg-slate-900 px-10 py-12 lg:flex-row lg:gap-y-0 lg:gap-x-8 lg:overflow-visible xl:gap-x-20 xl:px-20"
+          >
             {/* Left */}
             <div className="absolute -top-12 right-0 left-0 w-full transition-all duration-[3000ms] group-hover/parent:scale-95 lg:relative lg:z-10 lg:w-1/2 lg:drop-shadow-2xl lg:group-hover/parent:drop-shadow-md">
               <div className="relative mx-auto flex h-[650px] w-full max-w-[680px] flex-row gap-x-6 transition-all duration-[3000ms]">
                 {/* col1 */}
                 <div className="flex w-1/2 flex-col items-end justify-center gap-y-6 xs:w-7/12">
-                  <div className="relative flex h-[65%] w-full items-center overflow-hidden rounded-3xl shadow-gray-500/40 transition-all duration-500 ease-in hover:shadow-lg xs:w-8/12">
+                  <div className="relative flex h-[65%] w-full items-center overflow-hidden rounded-3xl shadow-gray-500/40 transition-all duration-500 ease-in xs:w-8/12">
                     <Image
                       src={image2}
                       alt={""}
@@ -27,7 +40,7 @@ export default function GetStarted({}: Props) {
                       className="object-cover transition-all duration-[3000ms] ease-in-out hover:scale-110 hover:ease-out"
                     />
                   </div>
-                  <div className="relative flex h-[35%] w-full items-center overflow-hidden rounded-3xl shadow-gray-500/40 transition-all duration-500 ease-in hover:shadow-lg">
+                  <div className="relative flex h-[35%] w-full items-center overflow-hidden rounded-3xl shadow-gray-500/40 transition-all duration-500 ease-in">
                     <Image
                       src={image1}
                       alt={""}
@@ -38,7 +51,7 @@ export default function GetStarted({}: Props) {
                 </div>
                 {/* col2 */}
                 <div className="flex w-1/2 items-center xs:w-5/12">
-                  <div className="relative mt-12 flex h-4/6 w-full items-center overflow-hidden rounded-3xl shadow-gray-500/40 transition-all duration-500 ease-in hover:shadow-lg xs:mx-2">
+                  <div className="relative mt-12 flex h-4/6 w-full items-center overflow-hidden rounded-3xl shadow-gray-500/40 transition-all duration-500 ease-in xs:mx-2">
                     <Image
                       src={image3}
                       alt={""}
@@ -71,7 +84,7 @@ export default function GetStarted({}: Props) {
                 ></Image>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -7,8 +7,8 @@ type Props = {};
 
 export default function SearchBar({}: Props) {
   return (
-    <div className="mx-auto flex max-w-[1100px] flex-col gap-y-6 rounded-3xl bg-stone-100/90 py-8 px-4 backdrop-blur-[7px] md:flex-row md:gap-x-5 md:px-8 ">
-      <div className="flex w-full flex-col items-center justify-center gap-y-5 md:w-5/6">
+    <div className="mx-auto flex max-w-[1100px] flex-col gap-y-3 rounded-3xl bg-stone-100/90 py-4 px-4 backdrop-blur-[7px] md:flex-row md:gap-y-6 md:gap-x-5 md:py-8 md:px-8 ">
+      <div className="flex w-full flex-col items-center justify-center md:w-5/6 md:gap-y-3 lg:gap-y-5">
         {/* 1st Row */}
         <div className="my-2 flex flex-row items-center justify-center gap-x-5">
           <FilterButton title="Buy"></FilterButton>
@@ -19,7 +19,7 @@ export default function SearchBar({}: Props) {
         </div>
 
         {/* 2nd row */}
-        <div className="flex w-full flex-row justify-between divide-x-2 rounded-2xl bg-white py-4 px-6 text-gray-500 shadow-lg">
+        <div className="flex w-full flex-row justify-between divide-x-2 rounded-xl bg-white py-3 px-6 text-gray-500 shadow-lg md:rounded-2xl md:py-4">
           <div className="flex w-full flex-row items-center justify-center gap-x-3 text-sm font-medium">
             <MagnifyingGlassIcon className="mx-2 h-5 w-5 flex-none cursor-pointer text-gray-500 active:scale-95 md:mx-4"></MagnifyingGlassIcon>
             <input
@@ -35,7 +35,7 @@ export default function SearchBar({}: Props) {
         </div>
       </div>
       <div className="flex w-full items-end justify-center md:w-1/6">
-        <div className="flex h-14 w-full cursor-pointer select-none items-center justify-center rounded-2xl bg-slate-900 text-sm text-stone-50 transition-all duration-300 hover:bg-slate-800 active:scale-95">
+        <div className="flex h-10 w-full cursor-pointer select-none items-center justify-center rounded-xl bg-slate-900 text-sm text-stone-50 transition-all duration-300 hover:bg-slate-800 active:scale-95 md:h-14 md:rounded-2xl">
           Search
         </div>
       </div>

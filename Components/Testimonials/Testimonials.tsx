@@ -1,3 +1,4 @@
+"use client";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { profile } from "console";
 import Image from "next/image";
@@ -15,6 +16,7 @@ import profile9 from "../../public/Images/Places/profile pictures/9.jpg";
 import profile10 from "../../public/Images/Places/profile pictures/10.jpg";
 
 import TestimonialCard from "./TestimonialCard";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -24,14 +26,36 @@ export default function Testimonials({}: Props) {
       <div className="mx-auto max-w-[2500px]">
         <div className="my-6 mx-5 flex h-[1200px] flex-col md:mx-10 lg:mx-16 lg:h-[900px] xl:mx-24">
           {/* Row 1 */}
-          <div className="flex justify-center text-center text-xl font-semibold text-orange-500 xs:text-2xl sm:justify-start sm:text-start">
+          <motion.div
+            viewport={{ once: true }}
+            initial={{ y: -120, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 0.4,
+              type: "spring",
+              damping: 50,
+              stiffness: 100,
+            }}
+            className="flex justify-center text-center text-xl font-semibold text-orange-500 xs:text-2xl sm:justify-start sm:text-start"
+          >
             <p>Testimonials</p>
-          </div>
+          </motion.div>
 
           {/* Row 2 */}
           <div className="flex h-full w-full flex-col items-center justify-center gap-y-12 gap-x-8 lg:flex-row lg:gap-y-0">
             {/* Col 2.1 */}
-            <div className="flex w-full flex-col gap-y-6 sm:gap-y-12 lg:h-full lg:w-2/6">
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ x: -300, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                type: "spring",
+                damping: 30,
+                stiffness: 100,
+              }}
+              className="flex w-full flex-col gap-y-6 sm:gap-y-12 lg:h-full lg:w-2/6"
+            >
               <div className="mt-10 text-center text-4xl font-extrabold text-slate-800 xs:text-5xl sm:text-start sm:text-6xl lg:text-5xl xl:text-[70px] xl:leading-[90px]">
                 What People Are Saying About Us
               </div>
@@ -86,12 +110,23 @@ export default function Testimonials({}: Props) {
                   <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 ease-out group-focus:translate-x-32 group-focus:ease-in-out xs:group-focus:translate-x-96 md:group-focus:translate-x-[500px] lg:group-focus:translate-x-24"></ArrowRightIcon>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Col 2.2 */}
             <div className="relative h-full w-full overflow-hidden lg:w-4/6">
               <div className="grid h-full w-full grid-cols-1 gap-8 sm:grid-cols-2">
-                <div className="flex flex-col gap-y-8">
+                <motion.div
+                  viewport={{ once: true }}
+                  initial={{ y: 500, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    type: "spring",
+                    damping: 37,
+                    stiffness: 100,
+                  }}
+                  className="flex flex-col gap-y-8"
+                >
                   <TestimonialCard
                     name="Bowen Ala"
                     username="bowen_ala"
@@ -110,8 +145,20 @@ export default function Testimonials({}: Props) {
                     profilepic={profile9}
                     rating={4.9}
                   />
-                </div>
-                <div className="flex flex-col gap-y-8">
+                </motion.div>
+                <motion.div
+                  viewport={{ once: true }}
+                  initial={{ y: 500, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    type: "spring",
+                    damping: 50,
+                    stiffness: 100,
+                    delay: 0.3,
+                  }}
+                  className="flex flex-col gap-y-8"
+                >
                   <TestimonialCard
                     name={"Emile Ste"}
                     username={"emile_ste"}
@@ -136,7 +183,7 @@ export default function Testimonials({}: Props) {
                     profilepic={profile10}
                     rating={4.8}
                   />
-                </div>
+                </motion.div>
                 {/* <div className="flex h-96 w-full flex-col rounded-3xl border-[3px] border-gray-300 bg-[#fafafa]"></div> */}
               </div>
 
@@ -145,7 +192,19 @@ export default function Testimonials({}: Props) {
             </div>
 
             {/* Col 2.3 */}
-            <div className="flex h-20 w-full items-center lg:hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                type: "spring",
+                damping: 30,
+                stiffness: 100,
+                delay: 0.5,
+              }}
+              className="flex h-20 w-full items-center lg:hidden"
+            >
               <div
                 tabIndex={0}
                 className="group flex h-16 w-full cursor-pointer flex-row items-center justify-center gap-x-5 overflow-hidden rounded-3xl border-[2px] border-slate-700 px-8 py-4 font-medium transition-all duration-300 focus:bg-slate-100 focus:shadow-lg hover:bg-slate-100 active:scale-95 active:shadow-lg lg:w-72"
@@ -155,7 +214,7 @@ export default function Testimonials({}: Props) {
                 </div>
                 <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 ease-out group-focus:translate-x-32 group-focus:ease-in-out xs:group-focus:translate-x-96 md:group-focus:translate-x-[500px] lg:group-focus:translate-x-24"></ArrowRightIcon>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
