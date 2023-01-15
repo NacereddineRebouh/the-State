@@ -1,6 +1,7 @@
 import { Raleway } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
+import { AnalyticsWrapper } from "../Components/Analytics/analytics";
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header";
 import background2 from "../public/Images/Background/Lines.png";
@@ -30,6 +31,7 @@ export default function RootLayout({
         <footer id="Footer" className="mt-40 w-full md:mt-60">
           <Footer />
         </footer>
+        <AnalyticsWrapper />
       </body>
     </html>
   );
