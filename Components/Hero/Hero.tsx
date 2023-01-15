@@ -37,9 +37,9 @@ export default function Hero({}: Props) {
   //   scrollY.onChange((s) => setYPosition(s));
   // }, [scrollY]);
 
-  let y2 = useTransform(springY2, [0, 600], ["0%", "50%"]);
+  let y2 = useTransform(springY2, [0, 500], ["0%", "100%"]);
   let y = useTransform(springY, [0, 500], ["0%", "40%"]);
-  let scaley = useTransform(scaleSpring, [0, 500], ["100%", "75%"]);
+  let scaley = useTransform(scaleSpring, [0, 500], ["100%", "70%"]);
   let scale = useTransform(scaleSpring, [0, 450], ["100%", "120%"]);
 
   // let background = useTransform(backgroundSpring, [0, 600], ["3%", "10%"]);//go slightly down
