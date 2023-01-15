@@ -145,8 +145,10 @@ export default function Explore({ SearchBarLocation }: Props) {
                       </div>
                     </div>
                     <div className="flex flex-row divide-x-2 divide-slate-500 text-xl font-bold">
-                      <p className="mr-4 text-xl xl:text-2xl">$430,000</p>
-                      <div className="flex flex-row gap-x-4 truncate px-5">
+                      <p className="mr-3 flex items-center text-xl sm:mr-4 xl:text-2xl">
+                        $430,000
+                      </p>
+                      <div className="flex flex-row flex-wrap gap-x-4 truncate pl-3 sm:pl-5">
                         <div className="flex flex-row gap-x-2">
                           <BiBath className="h-6 w-6 xl:h-8 xl:w-8"></BiBath>
                           <div className="text-lg font-medium">2</div>
@@ -159,7 +161,7 @@ export default function Explore({ SearchBarLocation }: Props) {
                           <MdBed className="h-6 w-6 xl:h-8 xl:w-8"></MdBed>
                           <div className="text-lg font-medium">4</div>
                         </div>
-                        <div className="flex flex-row gap-x-2">
+                        <div className="flex flex-row gap-x-2 truncate">
                           <BiRuler className="h-7 w-7 xl:h-8 xl:w-8"></BiRuler>
                           <div className="text-lg font-medium">500 km</div>
                         </div>

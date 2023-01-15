@@ -37,7 +37,7 @@ export default function Hero({}: Props) {
   //   scrollY.onChange((s) => setYPosition(s));
   // }, [scrollY]);
 
-  let y2 = useTransform(springY2, [0, 900], ["0%", "100%"]);
+  let y2 = useTransform(springY2, [0, 600], ["0%", "50%"]);
   let y = useTransform(springY, [0, 500], ["0%", "40%"]);
   let scaley = useTransform(scaleSpring, [0, 500], ["100%", "75%"]);
   let scale = useTransform(scaleSpring, [0, 450], ["100%", "120%"]);
@@ -134,7 +134,7 @@ export default function Hero({}: Props) {
               stiffness: 100,
             }}
             style={{ scale }}
-            className="relative top-[0%] z-[7] mx-auto w-[550px] origin-top text-center text-[28px] font-extrabold xs:text-[32px] sm:text-[46px] md:absolute md:top-[5%] md:text-start lg:origin-top-left 2xl:top-[5%] 2xl:w-[850px] 2xl:text-[72px]"
+            className="relative top-[0%] z-[7] mx-auto h-fit w-[550px] origin-top text-center text-[28px] font-extrabold xs:text-[32px] sm:text-[46px] md:absolute md:top-[5%] md:text-start lg:origin-top-left 2xl:top-[5%] 2xl:w-[850px] 2xl:text-[72px]"
           >
             Your first and{" "}
             <span className="text-orange-500 underline">last</span> stop for all
@@ -168,8 +168,48 @@ export default function Hero({}: Props) {
               ></Image>
               <div className="absolute -bottom-56 left-0 right-0 h-36 w-full bg-[#fafafa]"></div>
             </motion.div>
+            <div className="absolute -bottom-60 right-0 left-0 z-[10] mx-auto">
+              <div className="mx-auto flex max-w-[2000px] flex-row items-center justify-start gap-x-12 overflow-x-scroll py-6 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-stone-300 scrollbar-thumb-rounded-full">
+                <div className="mx-1 flex-1">
+                  <DescriptionCard
+                    logo={<TfiMedall className="h-full w-full rounded-lg" />}
+                    title={"Professional Company"}
+                    description={
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
+                    }
+                  />
+                </div>
+                <div className="mx-1 flex-1">
+                  <DescriptionCard
+                    logo={<ClockIcon className="h-full w-full rounded-lg" />}
+                    title={"24 Hours support"}
+                    description={
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
+                    }
+                  />
+                </div>
+                <div className="mx-1 flex-1">
+                  <DescriptionCard
+                    logo={<GlobeAltIcon className="h-full w-full rounded-lg" />}
+                    title={"Service in various countries"}
+                    description={
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
+                    }
+                  />
+                </div>
+                <div className="mx-1 flex-1">
+                  <DescriptionCard
+                    logo={<BoltIcon className="h-full w-full rounded-lg" />}
+                    title={"Efficient process"}
+                    description={
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
+                    }
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="absolute -bottom-60 right-0 left-0 z-[8] mx-auto">
+          {/* <div className="absolute -bottom-60 right-0 left-0 z-[8] mx-auto">
             <div className="mx-auto flex max-w-[2000px] flex-row items-center justify-start gap-x-12 overflow-x-scroll py-6 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-stone-300 scrollbar-thumb-rounded-full">
               <div className="mx-1 flex-1">
                 <DescriptionCard
@@ -208,7 +248,7 @@ export default function Hero({}: Props) {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

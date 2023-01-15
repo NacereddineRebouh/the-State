@@ -6,10 +6,6 @@ type Props = {};
 
 export default async function SearchBar_Location({}: Props) {
   let Location: any = "";
-  console.log(
-    "https://api.maptiler.com/geolocation/ip.json?key=" +
-      process.env.maptiler_Key
-  );
   const res = await fetch(
     "https://api.maptiler.com/geolocation/ip.json?key=" +
       process.env.maptiler_Key
@@ -17,12 +13,6 @@ export default async function SearchBar_Location({}: Props) {
   Location = await res.json();
   let country = Location?.country ?? "Not found";
   let city = Location?.city ?? " ";
-  console.log(Location);
-  try {
-  } catch (error) {
-    console.log(error);
-  }
-
   return (
     <div className="absolute top-6 left-2 z-10 mx-auto flex h-[65px] w-10/12 flex-row items-center justify-between overflow-hidden rounded-3xl bg-white px-2 py-2 drop-shadow-xl sm:right-0 sm:left-0 sm:h-[75px] sm:w-9/12">
       <div className="flex flex-row items-center justify-start overflow-clip">
