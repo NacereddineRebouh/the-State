@@ -32,7 +32,7 @@ export default function Explore({ SearchBarLocation }: Props) {
               transition={{
                 duration: 0.4,
                 type: "spring",
-                damping: 30,
+                damping: 50,
                 stiffness: 100,
               }}
             >

@@ -16,13 +16,13 @@ export default function AboutUs({}: Props) {
       <div className="mx-auto max-w-[2500px]">
         <div className="my-6 mx-5 flex flex-col md:mx-10 lg:mx-16 xl:mx-24">
           <motion.div
-            initial={{ y: -80, opacity: 0 }}
+            initial={{ y: -100, opacity: 0 }}
             viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
               duration: 0.3,
               type: "spring",
-              damping: 20,
+              damping: 50,
               stiffness: 100,
             }}
             className="text-center text-xl font-semibold text-orange-500 xs:text-2xl sm:text-start"

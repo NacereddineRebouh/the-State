@@ -30,24 +30,15 @@ export default function Hero({}: Props) {
   let springY2 = useSpring(scrollY, { damping: 38, stiffness: 100 });
 
   let backgroundSpring = useSpring(scrollY, { damping: 18, stiffness: 100 });
-  // useEffect(() => {
-  //   return scrollY.onChange((v) => console.log(v));
-  // }, [scrollY]);
-  // useEffect(() => {
-  //   scrollY.onChange((s) => setYPosition(s));
-  // }, [scrollY]);
-
   let y2 = useTransform(springY2, [0, 500], ["0%", "100%"]);
+  let y2Opacity = useTransform(springY2, [300, 500], ["100%", "0%"]);
+
   let y = useTransform(springY, [0, 500], ["0%", "40%"]);
   let scaley = useTransform(scaleSpring, [0, 500], ["100%", "70%"]);
   let scale = useTransform(scaleSpring, [0, 450], ["100%", "120%"]);
 
-  // let background = useTransform(backgroundSpring, [0, 600], ["3%", "10%"]);//go slightly down
-
   let background = useTransform(backgroundSpring, [0, 1100], ["0%", "-14%"]); //go slightly up
 
-  // console.log("Scroll progress val: ", springY);
-  // console.log("Scroll hookedYPostion val: ", YPostion);
   return (
     <div className="w-full">
       <div className="relative mx-auto max-w-[2500px]">
@@ -80,7 +71,7 @@ export default function Hero({}: Props) {
             className="absolute -left-10 right-0 top-[18%] z-[1] mx-auto flex aspect-square h-[500px] w-[500px] origin-center items-center justify-center rounded-full bg-gradient-to-b from-orange-500/70 xs:left-0 lg:left-auto lg:-right-24 lg:h-[800px] lg:w-[800px]"
           ></motion.div>
           <motion.div
-            style={{ y: y2 }}
+            style={{ y: y2, opacity: y2Opacity }}
             initial={{ y: 150, opacity: 0, scale: 0.9 }}
             whileInView={{ y: 0, opacity: 1, scale: 1 }}
             viewport={{ once: true }}
