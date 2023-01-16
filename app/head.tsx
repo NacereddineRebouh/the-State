@@ -14,7 +14,10 @@ export default function Head() {
         property="og:description"
         content="We offer expert guidance on all aspects of your transaction so that you can feel secure in your decision and confident in our work."
       />
-      <meta property="og:image" content={image.src} />
+      <meta
+        property="og:image"
+        content="https://res.cloudinary.com/dttrs30gt/image/upload/v1673856350/theState/og_image_jhokdu.png"
+      />
       <meta property="og:url" content="https://the-state.vercel.app" />
       <meta property="og:type" content="website" />
 
