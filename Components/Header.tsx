@@ -3,13 +3,23 @@ import { Disclosure, Transition } from "@headlessui/react";
 import Link from "next/link";
 import React from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
 type Props = {};
 
 export default function Header({}: Props) {
   return (
     <Disclosure as="nav" className={"w-full"}>
       {({ open }) => (
-        <div
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.4,
+            type: "spring",
+            damping: 30,
+            stiffness: 100,
+          }}
           className={`w-full ${
             open
               ? "bg-orange-400/20 backdrop-blur-sm transition-all duration-300"
@@ -125,7 +135,7 @@ export default function Header({}: Props) {
               </Disclosure.Panel>
             </Transition>
           </div>
-        </div>
+        </motion.div>
       )}
     </Disclosure>
   );
