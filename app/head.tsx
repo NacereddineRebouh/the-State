@@ -15,6 +15,8 @@ export default function Head() {
         content="We offer expert guidance on all aspects of your transaction so that you can feel secure in your decision and confident in our work."
       />
       <meta property="og:image" content={image.src} />
+      <meta property="og:url" content="https://the-state.vercel.app" />
+      <meta property="og:type" content="website" />
 
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
