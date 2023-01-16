@@ -10,5 +10,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @apply my-12  px-12 lg:w-[500px];
+  @apply my-12 px-8 lg:w-[500px] lg:px-0;
 }
