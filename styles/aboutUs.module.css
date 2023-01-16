@@ -10,5 +10,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @apply my-12 mx-4 w-[410px] lg:w-[500px] lg:px-0;
+  @apply my-12 mx-4 w-[410px] lg:w-[450px] lg:px-0;
 }
