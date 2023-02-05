@@ -17,5 +17,8 @@ A modern and user-friendly landing page.
 3. Install the required packages: `npm install`
 4. Start the development server: `npm run dev`
 
+## Screenshots
+![Alt Text](./public/Images/og/og_image.png)
+
 ## Demo
 Demo here: https://the-state.vercel.app
