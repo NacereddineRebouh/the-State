@@ -160,7 +160,17 @@ export default function Hero({}: Props) {
               <div className="absolute -bottom-56 left-0 right-0 h-36 w-full bg-[#fafafa]"></div>
             </motion.div>
             <div className="absolute -bottom-60 right-0 left-0 z-[10] mx-auto">
-              <div className="mx-auto flex max-w-[2000px] flex-row items-center justify-start gap-x-12 overflow-x-scroll py-6 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-stone-300 scrollbar-thumb-rounded-full">
+              <motion.div
+                initial={{ x: 1000, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 1000, opacity: 0 }}
+                transition={{
+                  type: "spring",
+                  damping: 300,
+                  stiffness: 500,
+                }}
+                className="mx-auto flex max-w-[2000px] flex-row items-center justify-start gap-x-12 overflow-x-scroll py-6 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-stone-300 scrollbar-thumb-rounded-full"
+              >
                 <div className="mx-1 flex-1">
                   <DescriptionCard
                     logo={<TfiMedall className="h-full w-full rounded-lg" />}
@@ -197,49 +207,9 @@ export default function Hero({}: Props) {
                     }
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
-          {/* <div className="absolute -bottom-60 right-0 left-0 z-[8] mx-auto">
-            <div className="mx-auto flex max-w-[2000px] flex-row items-center justify-start gap-x-12 overflow-x-scroll py-6 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-stone-300 scrollbar-thumb-rounded-full">
-              <div className="mx-1 flex-1">
-                <DescriptionCard
-                  logo={<TfiMedall className="h-full w-full rounded-lg" />}
-                  title={"Professional Company"}
-                  description={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
-                  }
-                />
-              </div>
-              <div className="mx-1 flex-1">
-                <DescriptionCard
-                  logo={<ClockIcon className="h-full w-full rounded-lg" />}
-                  title={"24 Hours support"}
-                  description={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
-                  }
-                />
-              </div>
-              <div className="mx-1 flex-1">
-                <DescriptionCard
-                  logo={<GlobeAltIcon className="h-full w-full rounded-lg" />}
-                  title={"Service in various countries"}
-                  description={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
-                  }
-                />
-              </div>
-              <div className="mx-1 flex-1">
-                <DescriptionCard
-                  logo={<BoltIcon className="h-full w-full rounded-lg" />}
-                  title={"Efficient process"}
-                  description={
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis lorem porttitor sit mattis."
-                  }
-                />
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
 

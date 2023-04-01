@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from "react";
 import Hero from "../Components/Hero/Hero";
 import About_us from "../Components/about us/About_us";
@@ -6,8 +5,6 @@ import Explore from "../Components/Explore/Explore";
 import Featured_Places from "../Components/Featured Places/Featured_Places";
 import Testimonials from "../Components/Testimonials/Testimonials";
 import GetStarted from "../Components/GetStarted/GetStarted";
-import Footer from "../Components/Footer/Footer";
-import Use_Scroll from "../Components/testing animations/use_Scroll";
 import SearchBar_Location from "../Components/Explore/SearchBar_Location";
 type Props = {};
 
