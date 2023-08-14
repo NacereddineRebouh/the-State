@@ -13,9 +13,9 @@ import image10 from "../../public/Images/Explore/10.jpg";
 import image11 from "../../public/Images/Explore/11.jpg";
 import image12 from "../../public/Images/Explore/12.jpg";
 
-import image1 from "../../public/Images/Places/profile pictures/1.jpg";
+import image1 from "../../public/Images/Places/profile pictures/1.png";
 import image2 from "../../public/Images/Places/profile pictures/2.jpg";
-import image3 from "../../public/Images/Places/profile pictures/3.jpg";
+import image3 from "../../public/Images/Places/profile pictures/3.png";
 
 import image4 from "../../public/Images/Places/1.jpg";
 import image5 from "../../public/Images/Places/2.jpg";

@@ -28,9 +28,9 @@ import image17 from "../../public/Images/Places/17.jpg";
 import image20 from "../../public/Images/Places/20.jpg";
 import image19 from "../../public/Images/Places/19.jpg";
 
-import profile1 from "../../public/Images/Places/profile pictures/1.jpg";
-import profile2 from "../../public/Images/Places/profile pictures/2.jpg";
-import profile3 from "../../public/Images/Places/profile pictures/3.jpg";
+import profile1 from "../../public/Images/Places/profile pictures/1.png";
+import profile2 from "../../public/Images/Places/profile pictures/2.png";
+import profile3 from "../../public/Images/Places/profile pictures/3.png";
 import PlacesCard from "./PlacesCard";
 import { StaticImageData } from "next/image";
 

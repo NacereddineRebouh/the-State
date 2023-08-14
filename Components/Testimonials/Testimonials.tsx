@@ -4,16 +4,12 @@ import { profile } from "console";
 import Image from "next/image";
 import React from "react";
 
-import profile1 from "../../public/Images/Places/profile pictures/1.jpg";
-import profile2 from "../../public/Images/Places/profile pictures/2.jpg";
-import profile3 from "../../public/Images/Places/profile pictures/3.jpg";
+import profile1 from "../../public/Images/Places/profile pictures/1.png";
+import profile2 from "../../public/Images/Places/profile pictures/2.png";
+import profile3 from "../../public/Images/Places/profile pictures/3.png";
 
-import profile4 from "../../public/Images/Places/profile pictures/5.jpg";
-import profile5 from "../../public/Images/Places/profile pictures/6.jpg";
-import profile6 from "../../public/Images/Places/profile pictures/7.jpg";
-import profile7 from "../../public/Images/Places/profile pictures/8.jpg";
-import profile9 from "../../public/Images/Places/profile pictures/9.jpg";
-import profile10 from "../../public/Images/Places/profile pictures/10.jpg";
+import profile4 from "../../public/Images/Places/profile pictures/5.png";
+import profile5 from "../../public/Images/Places/profile pictures/6.png";
 
 import TestimonialCard from "./TestimonialCard";
 import { motion } from "framer-motion";
@@ -136,13 +132,13 @@ export default function Testimonials({}: Props) {
                   <TestimonialCard
                     name={"Jimi Nurul"}
                     username={"jimi_nurul"}
-                    profilepic={profile7}
+                    profilepic={profile5}
                     rating={4.9}
                   />
                   <TestimonialCard
                     name={"Karter Gerrard"}
                     username={"karter_gerrard"}
-                    profilepic={profile9}
+                    profilepic={profile1}
                     rating={4.9}
                   />
                 </motion.div>
@@ -171,7 +167,7 @@ export default function Testimonials({}: Props) {
                   <TestimonialCard
                     name="Norm Van"
                     username="norm_van"
-                    profilepic={profile6}
+                    profilepic={profile2}
                     rating={4.8}
                     Comment={
                       "Here are no words to express my huge gratitude to you for the advice you provided and for being so accommodating and responsive to all the requests regarding the properties I viewed and particularly the property I bought!"
@@ -180,7 +176,7 @@ export default function Testimonials({}: Props) {
                   <TestimonialCard
                     name="Mirza Hatim"
                     username="mirza_hatim"
-                    profilepic={profile10}
+                    profilepic={profile3}
                     rating={4.8}
                   />
                 </motion.div>
